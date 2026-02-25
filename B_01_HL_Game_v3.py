@@ -216,7 +216,7 @@ while rounds_played < num_rounds:
 
         # If there are no guesses left
         else:
-            feedback = "Sorry - you have no more guesses. You lose this round"
+            feedback = "Sorry - you have no more guesses. You lost this round"
 
             # add 1 to maximum number of guesses allowed for stats / score
             guesses_used = guesses_allowed + 1
@@ -226,7 +226,7 @@ while rounds_played < num_rounds:
         all_scores.append(guesses_used)
 
         # Additional feedback (warn user that they are running out of guesses
-        if guesses_used == guesses_allowed - 1:
+        if guesses_used == guesses_allowed - 1 and guess != secret:
             print("\n 💣💣💣 Careful - you only have one guess left!💣💣💣\n")
 
         # ***** end of guessing loop, outdent to increase rounds *****&*&
